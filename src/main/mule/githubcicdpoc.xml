@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="githubcicdpocFlow" doc:id="a96ea573-f2ef-447d-956b-0053485a7404" >
+		<scheduler doc:name="Scheduler" doc:id="c93aab70-2efd-406a-87b6-3f13f9f94e39" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="5" timeUnit="SECONDS"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="a87e2aeb-4cf3-481a-933a-e19426b5d7de" message="Application deployed "/>
+	</flow>
+</mule>
